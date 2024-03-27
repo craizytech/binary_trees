@@ -11,7 +11,7 @@ void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int))
 	const binary_tree_t *parent = tree;
 
 	if (tree == NULL || func == NULL)
-		return (0);
+		return;
 	binary_tree_postorder(parent->left, func);
 	binary_tree_postorder(parent->right, func);
 	func(parent->n);
